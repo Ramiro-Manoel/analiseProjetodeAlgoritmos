@@ -1,8 +1,8 @@
-package main
+package prime
 
 import "math"
 
-func getPrimeNumbers(array []int) []int {
+func GetPrimeNumbers(array []int) []int {
 
 	var result = []int{}
 

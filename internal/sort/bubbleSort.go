@@ -1,6 +1,6 @@
-package main
+package sort
 
-func bubbleSort(array []int) []int {
+func BubbleSort(array []int) []int {
 
 	result := array
 

@@ -1,21 +1,18 @@
-package main
+package random
 
 import (
 	"errors"
 	"math/rand"
 )
 
-func randomArrayGenerator(size int, max int) ([]int, error) {
+func RandomArrayGenerator(size int) ([]int, error) {
 	if size <= 0 {
 		return nil, errors.New("array size must postive")
-	}
-	if max <= 0 {
-		return nil, errors.New("max number must be positive")
 	}
 
 	arr := make([]int, size)
 	for i := range arr {
-		arr[i] = rand.Intn(max)
+		arr[i] = rand.Int()
 	}
 	return arr, nil
 }

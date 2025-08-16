@@ -1,32 +1,31 @@
 package main
 
 import (
+	"analiseProjetodeAlgoritmos/internal/prime"
+	"analiseProjetodeAlgoritmos/internal/random"
+	"analiseProjetodeAlgoritmos/internal/sort"
 	"fmt"
 	"log"
 )
 
 func main() {
 
-	var size, max int
+	var size int
 
 	fmt.Print("Array size: ")
 	if _, err := fmt.Scan(&size); err != nil {
 		log.Fatal("The array size must be a number")
 	}
-	fmt.Print("Max random number: ")
-	if _, err := fmt.Scan(&max); err != nil {
-		log.Fatal("The max random number must be a number")
-	}
 
-	array, err := randomArrayGenerator(size, max)
+	array, err := random.RandomArrayGenerator(size)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	fmt.Println("random array: ", array)
 
-	array = bubbleSort(array)
+	array = sort.BubbleSort(array)
 	fmt.Println("sorted array: ", array)
 
-	fmt.Println("prime numbers: ", getPrimeNumbers(array))
+	fmt.Println("prime numbers: ", prime.GetPrimeNumbers(array))
 }
