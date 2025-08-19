@@ -2,16 +2,14 @@ package sort
 
 func SelectionSort(array []int) []int {
 
-	for i, num := range array {
+	for i := range array {
 		smallerIndex := i
-		for j := i + 1; i < len(array); j++ {
-			if array[j] < num {
+		for j := i; j < len(array); j++ {
+			if array[j] < array[smallerIndex] {
 				smallerIndex = j
 			}
 		}
-		smallerNumber := array[i]
-		array[i] = array[smallerIndex]
-		array[smallerIndex] = smallerNumber
+		array[i], array[smallerIndex] = array[smallerIndex], array[i]
 	}
 	return array
 }
