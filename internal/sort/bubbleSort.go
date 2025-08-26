@@ -1,15 +1,12 @@
 package sort
 
-func BubbleSort(array []int) []int {
+func BubbleSort(array []int) {
 
-	result := array
-
-	for i := 0; i < len(result)-1; i++ {
-		for j := 0; j < len(result)-1-i; j++ {
-			if result[j] > result[j+1] {
-				result[j], result[j+1] = result[j+1], result[j]
+	for i := 0; i < len(array)-1; i++ {
+		for j := 0; j < len(array)-1-i; j++ {
+			if array[j] > array[j+1] {
+				array[j], array[j+1] = array[j+1], array[j]
 			}
 		}
 	}
-	return result
 }

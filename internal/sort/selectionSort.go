@@ -1,6 +1,6 @@
 package sort
 
-func SelectionSort(array []int) []int {
+func SelectionSort(array []int) {
 
 	for i := range array {
 		smallerIndex := i
@@ -11,5 +11,4 @@ func SelectionSort(array []int) []int {
 		}
 		array[i], array[smallerIndex] = array[smallerIndex], array[i]
 	}
-	return array
 }
