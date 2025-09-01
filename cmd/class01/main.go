@@ -24,7 +24,7 @@ func main() {
 
 	fmt.Println("random array: ", array)
 
-	array = sort.BubbleSort(array)
+	sort.BubbleSort(array)
 	fmt.Println("sorted array: ", array)
 
 	fmt.Println("prime numbers: ", prime.GetPrimeNumbers(array))

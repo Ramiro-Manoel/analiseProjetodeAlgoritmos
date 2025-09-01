@@ -129,7 +129,7 @@ func main() {
 		fmt.Println(time.Since(start))
 
 		start = time.Now()
-		array = sort.BubbleSort(array)
+		sort.BubbleSort(array)
 		timer.sort = time.Since(start)
 
 		start = time.Now()

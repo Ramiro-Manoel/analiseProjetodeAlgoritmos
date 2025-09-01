@@ -20,16 +20,16 @@ func (t Timer) log(title string) {
 	fmt.Printf("Array já ordenado: %d ms\n", t.sorted.Milliseconds())
 }
 
-func measureDuration(f func([]int) []int, array []int) Timer {
+func measureDuration(f func([]int), array []int) Timer {
 
 	var timer Timer
 
 	start := time.Now()
-	sortedArray := f(array)
+	f(array)
 	timer.notSorted = time.Since(start)
 
 	start = time.Now()
-	_ = f(sortedArray)
+	f(array)
 	timer.sorted = time.Since(start)
 
 	return timer
@@ -45,7 +45,7 @@ func main() {
 		log.Fatal("The array size must be a number")
 	}
 
-	array, err := random.RandomArrayGenerator(size)
+	array, err := random.RandomArrayGenerator(size, 1500)
 	if err != nil {
 		log.Fatal(err)
 	}

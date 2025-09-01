@@ -2,7 +2,6 @@ package main
 
 import (
 	"analiseProjetodeAlgoritmos/internal/random"
-	"analiseProjetodeAlgoritmos/internal/sort"
 	"fmt"
 	"log"
 )
@@ -16,11 +15,10 @@ func main() {
 		log.Fatal("The array size must be a number")
 	}
 
-	array, err := random.RandomArrayGenerator(size)
+	array, err := random.RandomArrayGenerator(size, 1500)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Print(sort.QuickSort(array))
-
+	fmt.Print(array)
 }
