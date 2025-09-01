@@ -1,13 +1,18 @@
 package sort
 
-func MergeSort(array []int) []int {
+func MergeSort(array []int) {
+	sorted := mergeSort(array)
+	copy(array, sorted)
+}
+
+func mergeSort(array []int) []int {
 
 	if len(array) <= 1 {
 		return array
 	}
 
-	left := MergeSort(array[:len(array)/2])
-	right := MergeSort(array[len(array)/2:])
+	left := mergeSort(array[:len(array)/2])
+	right := mergeSort(array[len(array)/2:])
 	return merge(left, right)
 }
 

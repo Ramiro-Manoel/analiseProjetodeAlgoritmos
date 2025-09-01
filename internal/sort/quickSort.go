@@ -1,11 +1,15 @@
 package sort
 
-func QuickSort(array []int, low int, high int) {
+func QuickSort(array []int) {
+	quickSort(array, 0, len(array)-1)
+}
+
+func quickSort(array []int, low int, high int) {
 	if low < high {
 		pivot := partition(array, low, high)
 
-		QuickSort(array, low, pivot-1)
-		QuickSort(array, pivot+1, high)
+		quickSort(array, low, pivot-1)
+		quickSort(array, pivot+1, high)
 	}
 }
 
