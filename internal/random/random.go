@@ -12,7 +12,7 @@ func RandomArrayGenerator(size int, max int) ([]int, error) {
 
 	arr := make([]int, size)
 	for i := range arr {
-		arr[i] = rand.Intn(max)
+		arr[i] = rand.Intn(1500)
 	}
 	return arr, nil
 }
