@@ -17,7 +17,7 @@ func main() {
 		log.Fatal("The array size must be a number")
 	}
 
-	array, err := random.RandomArrayGenerator(size)
+	array, err := random.RandomArrayGenerator(size, 1500)
 	if err != nil {
 		log.Fatal(err)
 	}
