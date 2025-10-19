@@ -39,7 +39,7 @@ func main() {
 		{Start: 11, End: 13},
 		{Start: 11, End: 12},
 		{Start: 12, End: 13},
-	}, 3)
+	}, 4)
 
 	runIntervalPartitioning(intervalPartitioning.Intervals{
 		{Start: 0, End: 5},
