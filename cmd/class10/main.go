@@ -1,7 +1,7 @@
 package main
 
 import (
-	"analiseProjetodeAlgoritmos/internal/intervalPartitioning"
+	intervalPartitioning "analiseProjetodeAlgoritmos/internal/greddyAlgorithms"
 	"fmt"
 )
 
